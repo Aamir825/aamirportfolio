@@ -1,8 +1,9 @@
+import Technologies from '@/components/Technologies/Technologies'
 import React from 'react'
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <Technologies/>
   )
 }
 
