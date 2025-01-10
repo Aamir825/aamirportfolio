@@ -1,9 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 *{
-  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 .home-content .text-animate {
   position: relative;
@@ -33,6 +33,26 @@
   z-index: 1;
   animation: homeCursorText 6s linear infinite;
   animation-delay: 2s;
+}
+.navl{
+  position: relative;
+}
+.navl::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 0;
+  height: 2px;
+  background-color: #00abf0;
+  animation-delay: 2s;
+}
+.navl:hover::before{
+  width: 100%;
+  transition: width 0.5s;
+}
+.navl.active{
+  border-bottom: 2px solid #00abf0;
 }
 
 /* KEYFRAMES ANIMATION */

@@ -41,9 +41,9 @@ const projects = [
   },
 ];
 
-const Projects = () => {
+const FeaturedProjects = () => {
   return (
-    <section className="py-32 bg-gradient-to-r from-[#4a0050] to-[#040025] text-white">
+    <section className="py-16 bg-gradient-to-r from-[#040025] to-[#4a0050] text-white">
       <div className="container mx-auto px-6 md:px-12">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-1">
           Featured Projects
@@ -99,7 +99,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default FeaturedProjects;

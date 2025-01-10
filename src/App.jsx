@@ -5,6 +5,7 @@ import Aboutus from './Pages/Aboutus/Aboutus'
 import Projects from './Pages/Projects/Projects'
 import Contactus from './Pages/Contactus/Contactus'
 import Layout from './components/Layout/Layout'
+import Journey from './Pages/Journey/Journey'
 
 function App() {
 
@@ -16,6 +17,10 @@ function App() {
         {
           path: '/',
           element: <Home />
+        },
+        {
+          path: '/journey',
+          element: <Journey />
         },
         {
           path: '/projects',

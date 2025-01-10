@@ -6,7 +6,7 @@ import { SiMui, SiShadcnui } from "react-icons/si";
 
 const HeroSection = () => {
     return (
-        <section className="home bg-gray-900 bg-gradient-to-r from-[#040025] to-[#4a0050] text-white py-20" id="home">
+        <section className="home bg-gray-900 bg-gradient-to-r from-[#040025] to-[#4a0050] text-white py-32" id="home">
             <div className="home-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div className="md:text-left">
@@ -41,7 +41,7 @@ const HeroSection = () => {
                         </div>
                     </div>
                     <div className="developer-img">
-                        <img src="images/vector5.png" alt="Developer" className="mx-auto rounded-lg w-84" />
+                        <img src="images/vector8.webp" alt="Developer" className="mx-auto rounded-lg w-80 object-cover" />
                     </div>
                 </div>
             </div>
