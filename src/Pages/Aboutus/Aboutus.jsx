@@ -20,7 +20,7 @@ const AboutUs = () => {
           {/* Text Section */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              About Me
+              About <span className=" text-purple-400">Me</span>
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               Hello! I’m a passionate <span className="text-purple-400">Frontend Developer</span> with a love for crafting intuitive and visually stunning user interfaces.

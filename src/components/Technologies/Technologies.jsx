@@ -21,7 +21,7 @@ const Technologies = () => {
     <section className="py-16 px-4 bg-gradient-to-r from-[#040013] to-[#4a0050]">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-semibold text-white mb-1">
-          Built with modern technologies
+          Built with modern <span className='text-purple-400'>technologies</span>
         </h2>
         <p className="text-sm text-muted-foreground mb-16">
           From development to deployment, using the latest tools and frameworks.

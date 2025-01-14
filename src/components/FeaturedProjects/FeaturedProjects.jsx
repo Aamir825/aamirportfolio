@@ -46,7 +46,7 @@ const FeaturedProjects = () => {
     <section className="py-16 bg-gradient-to-r from-[#040025] to-[#4a0050] text-white">
       <div className="container mx-auto px-6 md:px-12">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-1">
-          Featured Projects
+          Featured <span className="text-purple-400">Projects</span>
         </h2>
         <p className=" text-center mb-10 text-sm text-muted-foreground">Innovative and impactful projects</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

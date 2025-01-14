@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -21,6 +22,28 @@ const ContactUs = () => {
     e.preventDefault();
     // Handle form submission logic (e.g., send email or store data)
     console.log(formData);
+    emailjs
+      .send(
+        'service_lqnj3yq', // Replace with your EmailJS Service ID
+        'template_23qhmhm', // Replace with your EmailJS Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+          message: formData.message,
+        },
+        'j2fMg9nUBtSWrpnPS' // Replace with your EmailJS Public Key (User ID)
+      )
+      .then(
+        (result) => {
+          console.log('Email successfully sent!', result.text);
+          setFormData({ name: '', email: '', phone: '', address: '', message: '' }); // Reset form
+        },
+        (error) => {
+          console.error('Failed to send email:', error.text);
+        }
+      );
   };
 
   return (
@@ -34,7 +57,7 @@ const ContactUs = () => {
 
           {/* Contact Form Section */}
           <div className=" p-8 text-gray-800">
-            <h3 className="text-3xl text-white font-semibold mb-6 text-left">Contact <span className=' text-blue-600'>Me!</span></h3>
+            <h3 className="text-3xl text-white font-semibold mb-6 text-left">Contact <span className=' text-purple-400'>Me!</span></h3>
             <form onSubmit={handleSubmit}>
               {/* Full Name and Email Fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-1">
@@ -103,7 +126,7 @@ const ContactUs = () => {
 
               {/* Submit Button */}
               <div className="btn-box">
-                <button type="submit" className="w-full bg-blue-600 text-white py-3 rounde bg-transparent">
+                <button type="submit" className="w-full bg-blue-700 text-white py-3 rounded-md hover:bg-blue-800 transition duration-300">
                   Submit
                 </button> 
               </div>
