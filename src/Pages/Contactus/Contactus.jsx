@@ -49,7 +49,7 @@ const ContactUs = () => {
   return (
     <section className="bg-gradient-to-r from-[#4a0050] to-[#040025] py-28 px-4 md:px-20">
       <div className="max-w-6xl mx-auto text-white text-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
           <div className=" p-8">
             <img src="images/vector8.webp" alt="Contact Us" className="w-full h-auto rounded-lg shadow-lg" />

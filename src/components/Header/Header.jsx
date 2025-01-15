@@ -42,7 +42,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`} id="mobile-menu">
+      <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden bg-gradient-to-r from-[#4a0050] to-[#040025] shadow-md rounded-bl-2xl rounded-br-2xl`} id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1">
           <NavLink to="/" className="text-white block px-3 py-2 rounded-md text-base font-medium">Home</NavLink>
           <NavLink to="journey" className="text-white block px-3 py-2 rounded-md text-base font-medium">Journey</NavLink>

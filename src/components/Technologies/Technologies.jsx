@@ -31,7 +31,7 @@ const Technologies = () => {
           {technologies.map((tech, index) => (
             <div 
               key={tech.name} 
-              className={`flex flex-col items-center border-[#a7a7a7] gap-2 p-5 ${index % 4 !== 3 ? 'border-r' : ''} ${index >= 4 ? 'border-t' : ''}`}
+              className={`flex flex-col items-center border-[#a7a7a7] gap-2 p-10 ${index % 4 !== 3 ? 'border-r' : ''} ${index >= 4 ? 'border-t' : ''}`}
             >
               <tech.Icon 
                 size={32} 

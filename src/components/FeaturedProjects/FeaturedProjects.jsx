@@ -1,43 +1,48 @@
 import React from "react";
-import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs } from "react-icons/fa";
-import { SiJavascript, SiTailwindcss, SiMui, SiNextdotjs } from "react-icons/si";
+import { FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { SiJavascript, SiTailwindcss, SiMui, SiRedux, SiJson } from "react-icons/si";
+import { RiFirebaseFill } from "react-icons/ri";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { Button } from "../ui/button";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
     title: "E-Commerce Platform",
     description: "A fully functional e-commerce application with Stripe payment integration.",
-    image: "images/vector2.webp",
+    image: "images/ecommerce_2.JPG",
     tech: [
       { name: "React", icon: <FaReact className="text-blue-400" /> },
-      { name: "Tailwind", icon: <SiTailwindcss className="text-teal-400" /> },
-      { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
+      { name: "Redux", icon: <SiRedux className="text-purple-600" /> },
+      { name: "Mui", icon: <SiMui className="text-blue-600" /> },
+      { name: "Firebase", icon: <RiFirebaseFill className="text-yellow-400" /> }
     ],
-    liveLink: "https://your-live-project.com",
-    repoLink: "https://github.com/your-repo",
+    liveLink: "https://ecommerce-alpha-wheat.vercel.app/",
+    repoLink: "",
   },
   {
-    title: "Portfolio Website",
+    title: "Dashboard UI",
     description: "My personal portfolio to showcase my skills and projects.",
-    image: "images/vector6.webp",
-    tech: [
-      { name: "Next.js", icon: <SiNextdotjs className="text-gray-300" /> },
-      { name: "Tailwind", icon: <SiTailwindcss className="text-teal-400" /> },
-      { name: "ShadCN", icon: <SiMui className="text-purple-400" /> },
-    ],
-    liveLink: "https://your-live-project.com",
-    repoLink: "https://github.com/your-repo",
-  },
-  {
-    title: "Task Management Tool",
-    description: "A Kanban-style task management tool for productivity.",
-    image: "images/vector7.webp",
+    image: "images/dashboard.JPG",
     tech: [
       { name: "React", icon: <FaReact className="text-blue-400" /> },
-      { name: "Redux Toolkit", icon: <SiJavascript className="text-yellow-400" /> },
-      { name: "Firebase", icon: <FaNodeJs className="text-orange-500" /> },
+      { name: "Tailwind", icon: <SiTailwindcss className="text-teal-400" /> },
+      { name: "JSON Server", icon: <SiJson className="text-gray-400" /> },
     ],
-    liveLink: "https://your-live-project.com",
-    repoLink: "https://github.com/your-repo",
+    liveLink: "https://dashboard-tau-orpin.vercel.app/",
+    repoLink: "",
+  },
+  {
+    title: "Shopping Cart",
+    description: "A Kanban-style task management tool for productivity.",
+    image: "images/shopingcart.JPG",
+    tech: [
+      { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
+      { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
+      { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
+    ],
+    liveLink: "https://shopingcart-steel.vercel.app/",
+    repoLink: "",
   },
 ];
 
@@ -53,12 +58,12 @@ const FeaturedProjects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="rounded-tl-xl rounded-tr-xl shadow-lg overflow-hidden hover:scale-105 transition-transform"
+              className="rounded-tl-xl rounded-tr-xl shadow-lg overflow-hidden hover:scale-105 transition delay-200"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 "
               />
               <div className="p-6 border border-[#23135e] border-t-0">
                 <h3 className="text-xl font-semibold text-white">
@@ -85,10 +90,11 @@ const FeaturedProjects = () => {
                     Live Demo
                   </a>
                   <a
-                    href={project.repoLink}
-                    target="_blank"
+                    // href={project.repoLink}
+                    // target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-indigo-600 hover:underline"
+                    className="text-sm font-medium text-indigo-600 cursor-not-allowed"
+                    disabled
                   >
                     View Code
                   </a>
@@ -96,6 +102,14 @@ const FeaturedProjects = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className=" mt-10 flex justify-center">
+          <Link to="projects">
+            <Button className=" bg-transparent border border-[#23135e] border-b-0 hover:bg-white hover:text-black px-8 py-4">
+              More Projects
+              <IoIosArrowRoundForward className="inline-block ml-2" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
