@@ -3,6 +3,7 @@ import { Button } from '../ui/button';
 import { FaCss3Alt, FaFacebook, FaHtml5, FaInstagram, FaJs, FaLinkedin, FaReact } from 'react-icons/fa';
 import { RiFirebaseFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiMui, SiShadcnui } from "react-icons/si";
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
     return (
@@ -32,12 +33,12 @@ const HeroSection = () => {
                         </div>
                         <div className="btn-box flex justify-start space-x-4 mb-8">
                             <Button className="bg-[#00abf0] hover:bg-[#2bb3e9] text-white font-bold py-4 px-10 rounded">Hire Me</Button>
-                            <Button className="bg-transparent border border-white hover:bg-white hover:text-gray-900 text-white font-bold py-4 px-10 rounded">Let's Talk</Button>
+                            <Link to="contact"><Button className="bg-transparent border border-white hover:bg-white hover:text-gray-900 text-white font-bold py-4 px-10 rounded">Let's Talk</Button></Link>
                         </div>
                         <div className="social-icons flex justify-start space-x-4 mb-8">
-                            <a href="#" className="text-2xl border-2 border-[#00abf0] rounded-full p-2"><FaFacebook size={16} /></a>
-                            <a href="#" className="text-2xl border-2 border-[#00abf0] rounded-full p-2"><FaInstagram size={16} /></a>
-                            <a href="#" className="text-2xl border-2 border-[#00abf0] rounded-full p-2"><FaLinkedin size={16} /></a>
+                            <a href="https://www.facebook.com/" target='_blank' className="text-2xl border-2 border-[#00abf0] rounded-full p-2"><FaFacebook size={16} /></a>
+                            <a  className="text-2xl border-2 border-[#00abf0] rounded-full p-2"><FaInstagram size={16} /></a>
+                            <a href="https://www.linkedin.com/in/muhammad-aamir-a9544525a/" target='_blank' className="text-2xl border-2 border-[#00abf0] rounded-full p-2"><FaLinkedin size={16} /></a>
                         </div>
                     </div>
                     <div className="developer-img">

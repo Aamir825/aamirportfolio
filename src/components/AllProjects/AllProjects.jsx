@@ -1,6 +1,6 @@
 import React from 'react'
-import { FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { SiJavascript, SiTailwindcss, SiMui, SiRedux, SiJson } from "react-icons/si";
+import { FaReact, FaHtml5, FaCss3Alt, FaStripeS } from "react-icons/fa";
+import { SiJavascript, SiTailwindcss, SiMui, SiJson } from "react-icons/si";
 import { RiFirebaseFill } from "react-icons/ri";
 
 const projects = [
@@ -10,8 +10,8 @@ const projects = [
       image: "images/ecommerce_2.JPG",
       tech: [
         { name: "React", icon: <FaReact className="text-blue-400" /> },
-        { name: "Redux", icon: <SiRedux className="text-purple-600" /> },
         { name: "Mui", icon: <SiMui className="text-blue-600" /> },
+        { name: "Stripe", icon: <FaStripeS className="text-blue-600" /> },
         { name: "Firebase", icon: <RiFirebaseFill className="text-yellow-400" /> }
       ],
       liveLink: "https://ecommerce-alpha-wheat.vercel.app/",
@@ -19,7 +19,7 @@ const projects = [
     },
     {
       title: "Dashboard UI",
-      description: "My personal portfolio to showcase my skills and projects.",
+      description: "A modern dashboard showcasing data with interactive charts and tables.",
       image: "images/dashboard.JPG",
       tech: [
         { name: "React", icon: <FaReact className="text-blue-400" /> },
@@ -31,7 +31,7 @@ const projects = [
     },
     {
       title: "Shopping Cart",
-      description: "A Kanban-style task management tool for productivity.",
+      description: "A basic shopping cart application with add and remove item functionality.",
       image: "images/shopingcart.JPG",
       tech: [
         { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
@@ -43,7 +43,7 @@ const projects = [
     },
     {
       title: "Website UI",
-      description: "My personal portfolio to showcase my skills and projects.",
+      description: "A clean and modern landing page for a furniture store.",
       image: "images/frontpage.JPG",
       tech: [
         { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
@@ -55,7 +55,7 @@ const projects = [
     },
     {
       title: "Filtering UI",
-      description: "A Kanban-style task management tool for productivity.",
+      description: "A dynamic UI that fetches and displays GitHub profile data.",
       image: "images/fetchapi.JPG",
       tech: [
         { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
@@ -67,7 +67,7 @@ const projects = [
     },
     {
       title: "Todolist",
-      description: "A Kanban-style task management tool for productivity.",
+      description: "A responsive to-do list app built with React and Tailwind CSS.",
       image: "images/todolist.JPG",
       tech: [
         { name: "React", icon: <FaReact className="text-blue-400" /> },

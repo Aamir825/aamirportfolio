@@ -1,23 +1,23 @@
 import React from 'react'
-import { FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { SiJavascript, } from "react-icons/si";
 
 const projects = [
     {
         title: "Gradient Generator",
-        description: "A fully functional e-commerce application with Stripe payment integration.",
+        description: "A tool to create custom CSS gradients with real-time previews.",
         image: "images/GradientGenerator.JPG",
         tech: [
             { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
             { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
             { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
         ],
-        liveLink: "https://ecommerce-alpha-wheat.vercel.app/",
+        liveLink: "https://gradientgenerator-six.vercel.app/",
         repoLink: "",
     },
     {
         title: "QR Code Generator",
-        description: "My personal portfolio to showcase my skills and projects.",
+        description: "A web app that generates QR codes for any input text.",
         image: "images/QRcode.JPG",
         tech: [
             { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
@@ -29,7 +29,7 @@ const projects = [
     },
     {
         title: "Weather App",
-        description: "A Kanban-style task management tool for productivity.",
+        description: "A simple weather app displaying real-time weather data fetched using APIs.",
         image: "images/WeatherApp.JPG",
         tech: [
             { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
