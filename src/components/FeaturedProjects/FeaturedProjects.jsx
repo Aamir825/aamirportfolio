@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { FaReact, FaHtml5, FaCss3Alt, FaStripeS } from "react-icons/fa";
 import { SiJavascript, SiTailwindcss, SiMui, SiJson } from "react-icons/si";
 import { RiFirebaseFill } from "react-icons/ri";
@@ -15,7 +16,7 @@ const projects = [
       { name: "React", icon: <FaReact className="text-blue-400" /> },
       { name: "Mui", icon: <SiMui className="text-blue-600" /> },
       { name: "Stripe", icon: <FaStripeS className="text-blue-600" /> },
-      { name: "Firebase", icon: <RiFirebaseFill className="text-yellow-400" /> }
+      { name: "Firebase", icon: <RiFirebaseFill className="text-yellow-400" /> },
     ],
     liveLink: "https://ecommerce-alpha-wheat.vercel.app/",
     repoLink: "",
@@ -47,35 +48,72 @@ const projects = [
 ];
 
 const FeaturedProjects = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px 0px" });
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, staggerChildren: 0.2 } },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.95 },
+    visible: { opacity: 1, y: 0, scale: 1 },
+    hover: { scale: 1.05, transition: { type: "spring", stiffness: 300 } },
+  };
+
   return (
-    <section className="py-16 bg-gradient-to-r from-[#040025] to-[#4a0050] text-white">
+    <motion.section
+      className="py-16 bg-gradient-to-r from-[#040025] to-[#4a0050] text-white"
+      ref={ref}
+      variants={containerVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+    >
       <div className="container mx-auto px-6 md:px-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-1">
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold text-center mb-1"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           Featured <span className="text-purple-400">Projects</span>
-        </h2>
-        <p className=" text-center mb-10 text-sm text-muted-foreground">Innovative and impactful projects</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </motion.h2>
+        <motion.p
+          className="text-center mb-10 text-sm text-muted-foreground"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          Innovative and impactful projects
+        </motion.p>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="rounded-tl-xl rounded-tr-xl shadow-lg overflow-hidden hover:scale-105 transition delay-200"
+              className="rounded-tl-xl rounded-tr-xl shadow-lg overflow-hidden"
+              variants={cardVariants}
+              whileHover="hover"
             >
-              <img
+              <motion.img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 "
+                className="w-full h-48"
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
               />
               <div className="p-6 border border-[#23135e] border-t-0">
-                <h3 className="text-xl font-semibold text-white">
-                  {project.title}
-                </h3>
+                <h3 className="text-xl font-semibold text-white">{project.title}</h3>
                 <p className="text-gray-400 mt-2">{project.description}</p>
                 <div className="mt-4 flex flex-wrap gap-4">
                   {project.tech.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="flex items-center gap-2 text-sm text-gray-300"
-                    >
+                    <span key={i} className="flex items-center gap-2 text-sm text-gray-300">
                       {tech.icon} {tech.name}
                     </span>
                   ))}
@@ -90,8 +128,6 @@ const FeaturedProjects = () => {
                     Live Demo
                   </a>
                   <a
-                    // href={project.repoLink}
-                    // target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm font-medium text-indigo-600 cursor-not-allowed"
                     disabled
@@ -100,19 +136,19 @@ const FeaturedProjects = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-        <div className=" mt-10 flex justify-center">
+        </motion.div>
+        <div className="mt-10 flex justify-center">
           <Link to="projects">
-            <Button className=" bg-transparent border border-[#23135e] border-b-0 hover:bg-white hover:text-black px-8 py-4">
+            <Button className="bg-transparent border border-[#23135e] border-b-0 hover:bg-white hover:text-black px-8 py-4">
               More Projects
               <IoIosArrowRoundForward className="inline-block ml-2" />
             </Button>
           </Link>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

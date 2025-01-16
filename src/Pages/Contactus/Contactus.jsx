@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { motion } from 'framer-motion'; // Import framer-motion
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -46,18 +47,45 @@ const ContactUs = () => {
       );
   };
 
+  // Animation variants
+  const formVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
+  };
+
   return (
     <section className="bg-gradient-to-r from-[#4a0050] to-[#040025] py-28 px-4 md:px-20">
       <div className="max-w-6xl mx-auto text-white text-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
-          <div className=" p-8">
-            <img src="images/vector8.webp" alt="Contact Us" className="w-full h-auto rounded-lg shadow-lg" />
-          </div>
+          <motion.div
+            className="p-8"
+            variants={imageVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <img
+              src="images/vector8.webp"
+              alt="Contact Us"
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </motion.div>
 
           {/* Contact Form Section */}
-          <div className=" p-8 text-gray-800">
-            <h3 className="text-3xl text-white font-semibold mb-6 text-left">Contact <span className=' text-purple-400'>Me!</span></h3>
+          <motion.div
+            className="p-8 text-gray-800"
+            variants={formVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <h3 className="text-3xl text-white font-semibold mb-6 text-left">
+              Contact <span className="text-purple-400">Me!</span>
+            </h3>
             <form onSubmit={handleSubmit}>
               {/* Full Name and Email Fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-1">
@@ -126,12 +154,15 @@ const ContactUs = () => {
 
               {/* Submit Button */}
               <div className="btn-box">
-                <button type="submit" className="w-full bg-blue-700 text-white py-3 rounded-md hover:bg-blue-800 transition duration-300">
+                <button
+                  type="submit"
+                  className="w-full bg-blue-700 text-white py-3 rounded-md hover:bg-blue-800 transition duration-300"
+                >
                   Submit
-                </button> 
+                </button>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

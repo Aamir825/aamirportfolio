@@ -3,28 +3,49 @@ import { FaCss3Alt, FaHtml5, FaJs, FaReact } from 'react-icons/fa';
 import { RiFirebaseFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiMui, SiShadcnui } from "react-icons/si";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const AboutUs = () => {
+  // Animation variants
+  const textVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
+  };
+
   return (
     <section className="py-32 bg-gradient-to-r from-[#4a0050] to-[#040025] text-white">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image Section */}
-          <div className="flex justify-center">
+          <motion.div
+            className="flex justify-center"
+            variants={imageVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <img
               src="images/vector8.webp"
               alt="About Me"
               className="rounded-full shadow-lg w-72 h-72 object-cover"
             />
-          </div>
+          </motion.div>
           {/* Text Section */}
-          <div>
+          <motion.div
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              About <span className=" text-purple-400">Me</span>
+              About <span className="text-purple-400">Me</span>
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               Hello! I’m a passionate <span className="text-purple-400">Frontend Developer</span> with a love for crafting intuitive and visually stunning user interfaces.
-              I specialize in building responsive and interactive web applications using modern technologies <span className=" flex gap-3 items-center"> like
+              I specialize in building responsive and interactive web applications using modern technologies <span className="flex gap-3 items-center"> like
                 <FaHtml5 color="#E34F26" size={20} />
                 <FaCss3Alt color="#1572B6" size={20} />
                 <FaJs color="#F7DF1E" size={20} />
@@ -44,7 +65,7 @@ const AboutUs = () => {
             >
               Let’s Connect
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
