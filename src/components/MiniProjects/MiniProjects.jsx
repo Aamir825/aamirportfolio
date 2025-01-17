@@ -24,7 +24,7 @@ const projects = [
             { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
             { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
         ],
-        liveLink: "https://dashboard-tau-orpin.vercel.app/",
+        liveLink: "https://qrcodegenerator-lovat-tau.vercel.app/",
         repoLink: "",
     },
     {
