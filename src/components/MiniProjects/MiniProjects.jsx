@@ -36,7 +36,7 @@ const projects = [
             { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
             { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
         ],
-        liveLink: "https://shopingcart-steel.vercel.app/",
+        liveLink: "https://weatherapp-tau-one.vercel.app/",
         repoLink: "",
     },
 ];
