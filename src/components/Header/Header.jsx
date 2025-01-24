@@ -9,7 +9,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <Link to="/" className="text-xl font-bold">M.Aamir</Link>
+            <Link to="/"><img className=" w-44 object-cover" src="images/brand55.png" alt="" /></Link>
           </div>
           <div className="hidden sm:block sm:ml-6">
             <div className="flex space-x-4">

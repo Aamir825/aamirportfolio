@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-[#040013] to-[#4a0050] text-white py-8">
+    <footer className="bg-gradient-to-r from-[#040025] to-[#3e0042] text-white py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <Link to="/" className="text-xl font-bold">M.Aamir</Link>
+            <Link to="/"><img className=" w-44 object-cover" src="images/brand55.png" alt="" /></Link>
           </div>
           <div className="flex space-x-4">
             <Link to="/" className="text-gray-400 hover:text-white hover:underline">Home</Link>
