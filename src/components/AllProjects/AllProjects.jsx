@@ -35,7 +35,7 @@ const projects = [
   },
   {
     title: "Shopping Cart",
-    description: "A basic shopping cart application with add and remove item functionality.",
+    description: "A basic shopping cart application with add and remove items functionality.",
     image: "images/shopingcart.JPG",
     tech: [
       { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
