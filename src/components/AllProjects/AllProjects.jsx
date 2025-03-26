@@ -59,7 +59,7 @@ const projects = [
   },
   {
     title: "Filtering UI",
-    description: "A dynamic UI that fetches and displays GitHub profile data.",
+    description: "A dynamic UI that fetches and display GitHub profile data.",
     image: "images/fetchapi.JPG",
     tech: [
       { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
