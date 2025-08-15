@@ -114,7 +114,7 @@ const Journey = () => {
                 },
                 {
                   period: "06/2023 - 08/2023",
-                  role: "Frontend Developer",
+                  role: "Frontend Developer Intern",
                   company: "Brains Institute Peshawar",
                   location: "Peshawar, Pakistan",
                   technologies: [
