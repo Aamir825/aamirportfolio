@@ -113,6 +113,24 @@ const Journey = () => {
                     "Currently contributing to the development of modern, user-friendly web applications at Merik Solution.",
                 },
                 {
+                  period: "08/2025 - Present",
+                  role: "Frontend Developer",
+                  company: "Synclogia",
+                  location: "Islamabad, Pakistan",
+                  technologies: [
+                    <SiJavascript className="text-yellow-400" />,
+                    <FaReact className="text-blue-400" />,
+                    <SiTailwindcss className="text-teal-400" />,
+                    <SiMui className="text-blue-600" />,
+                    <SiShadcnui />,
+                    <SiRedux className="text-purple-600" />,
+                    <SiJson className="text-gray-400" />,
+                    <RiFirebaseFill className="text-yellow-400" />,
+                  ],
+                  description:
+                    "Actively engaged in building responsive and scalable web applications at Synclogia, focusing on delivering seamless user experiences.",
+                },
+                {
                   period: "06/2023 - 08/2023",
                   role: "Frontend Developer Intern",
                   company: "Brains Institute Peshawar",
