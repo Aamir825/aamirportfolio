@@ -9,7 +9,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <Link to="/"><img className=" w-44 object-cover" src="images/brand55.png" alt="" /></Link>
+            <Link to="/" onClick={() => setIsOpen(false)}><img className=" w-44 object-cover" src="images/brand55.png" alt="" /></Link>
           </div>
           <div className="hidden sm:block sm:ml-6">
             <div className="flex space-x-4">
@@ -44,11 +44,11 @@ const Header = () => {
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden bg-gradient-to-r from-[#4a0050] to-[#040025] shadow-md rounded-bl-2xl rounded-br-2xl`} id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <NavLink to="/" className="text-white block px-3 py-2 rounded-md text-base font-medium">Home</NavLink>
-          <NavLink to="journey" className="text-white block px-3 py-2 rounded-md text-base font-medium">Journey</NavLink>
-          <NavLink to="projects" className="text-white block px-3 py-2 rounded-md text-base font-medium">Projects</NavLink>
-          <NavLink to="about" className="text-white block px-3 py-2 rounded-md text-base font-medium">About</NavLink>
-          <NavLink to="contact" className="text-white block px-3 py-2 rounded-md text-base font-medium">Contact</NavLink>
+          <NavLink to="/" onClick={() => setIsOpen(false)} className="text-white block px-3 py-2 rounded-md text-base font-medium">Home</NavLink>
+          <NavLink to="journey" onClick={() => setIsOpen(false)} className="text-white block px-3 py-2 rounded-md text-base font-medium">Journey</NavLink>
+          <NavLink to="projects" onClick={() => setIsOpen(false)} className="text-white block px-3 py-2 rounded-md text-base font-medium">Projects</NavLink>
+          <NavLink to="about" onClick={() => setIsOpen(false)} className="text-white block px-3 py-2 rounded-md text-base font-medium">About</NavLink>
+          <NavLink to="contact" onClick={() => setIsOpen(false)} className="text-white block px-3 py-2 rounded-md text-base font-medium">Contact</NavLink>
         </div>
       </div>
     </nav>
