@@ -166,14 +166,14 @@ const AllProjects = () => {
             </motion.div>
           ))}
         </motion.div>
-        <div className="mt-10 flex justify-center">
+        {/* <div className="mt-10 flex justify-center">
           <Link to="projects">
             <Button className="bg-transparent border border-[#23135e] border-b-0 hover:bg-white hover:text-black px-8 py-4">
               More Projects
               <IoIosArrowRoundForward className="inline-block ml-2" />
             </Button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </motion.section>
   );
