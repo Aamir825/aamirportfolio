@@ -1,13 +1,63 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaReact, FaHtml5, FaCss3Alt, FaStripeS } from "react-icons/fa";
-import { SiJavascript, SiTailwindcss, SiMui, SiJson } from "react-icons/si";
+import { SiJavascript, SiTailwindcss, SiMui, SiJson, SiShadcnui, SiClerk } from "react-icons/si";
 import { RiFirebaseFill } from "react-icons/ri";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
 
 const projects = [
+  {
+    title: "BM-ERP",
+    description: "A business management ERP for handling inventory, products, sales, customers, and financial records.",
+    image: "images/BM-ERP.png",
+    tech: [
+      { name: "React", icon: <FaReact className="text-blue-400" /> },
+      { name: "Tailwind", icon: <SiTailwindcss className="text-teal-400" /> },
+      { name: "Shadcn", icon: <SiShadcnui className="text-black" /> },
+      { name: "Firebase", icon: <RiFirebaseFill className="text-yellow-400" /> },
+    ],
+    liveLink: "https://bm-erp.vercel.app/",
+    repoLink: "",
+  },
+  {
+    title: "ToolBase",
+    description: "An AI-powered platform offering productivity tools for developers with a clean and responsive interface.",
+    image: "images/toolbase.png",
+    tech: [
+      { name: "React", icon: <FaReact className="text-blue-400" /> },
+      { name: "Tailwind", icon: <SiTailwindcss className="text-teal-400" /> },
+      { name: "Shadcn", icon: <SiShadcnui className="text-black" /> },
+    ],
+    liveLink: "https://toolbase-gold.vercel.app/",
+    repoLink: "",
+  },
+  {
+    title: "Authentication App",
+    description: "A secure authentication system built with Clerk, featuring login, sign up, Google Sign-In, and OTP authentication.",
+    image: "images/authentication.png",
+    tech: [
+      { name: "React", icon: <FaReact className="text-blue-400" /> },
+      { name: "Tailwind", icon: <SiTailwindcss className="text-teal-400" /> },
+      { name: "Clerk", icon: <SiClerk className="text-blue-600" /> },
+    ],
+    liveLink: "https://userauthentication-alpha.vercel.app/",
+    repoLink: "",
+  },
+  {
+    title: "FMS",
+    description: "A financial management system for tracking income, expenses, transactions, and business reports.",
+    image: "images/FMS.png",
+    tech: [
+      { name: "React", icon: <FaReact className="text-blue-400" /> },
+      { name: "Tailwind", icon: <SiTailwindcss className="text-teal-400" /> },
+      { name: "Shadcn", icon: <SiShadcnui className="text-black" /> },
+      { name: "Firebase", icon: <RiFirebaseFill className="text-yellow-400" /> },
+    ],
+    liveLink: "https://fms-ebon.vercel.app/",
+    repoLink: "",
+  },
   {
     title: "E-Commerce Platform",
     description: "A fully functional e-commerce application with Stripe payment integration.",
